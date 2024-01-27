@@ -28,16 +28,12 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        if (x == NULL || y == NULL) {
-            return NULL;
-        } else {
-            if (x > y) {
-                return 'Hello World!';
-            } else {
+        if(x > y){
+            return 'Hello World!';
+        }   else {
                 return NULL;
             }
-        }        
-    }
+        }   
 
     /**
      * Checks if a person is eligible to vote based on their age.
