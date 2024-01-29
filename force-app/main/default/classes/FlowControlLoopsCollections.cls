@@ -65,8 +65,8 @@ public with sharing class FlowControlLoopsCollections{
         if (num1 == NULL || num2 == NULL){
             return NULL;
         } else{
-            return Math.max(num1,num2);
-        }         
+            return Math.max(num1, num2);
+        }
     }
 
     /**
@@ -74,13 +74,13 @@ public with sharing class FlowControlLoopsCollections{
      * If the number is null, return null.
      * Example: checkNumber(5) should return "Positive"
      * @param a The number to check.
-     * @return A string indicating whether the number is "Positive", 
+     * @return A string indicating whether the number is "Positive",
      *         "Negative", or "Zero", or null if the number is null.
      */
     public static String checkNumber(Integer a){
         if (a == NULL){
             return NULL;
-        } else if (a > 0) {
+        } else if (a > 0){
             return 'Positive';
         } else if (a < 0){
             return 'Negative';
@@ -88,8 +88,7 @@ public with sharing class FlowControlLoopsCollections{
             return 'Zero';
         }
         return NULL;
-        }
-    
+    }
 
     /**
      * Checks if a number is even or odd.
@@ -99,7 +98,13 @@ public with sharing class FlowControlLoopsCollections{
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a){
-        return null; // Replace null with the variable you used to store the result
+        if (a == NULL){
+            return NULL;
+        } else if (Math.mod(a, 2) == 0){
+            return 'Even';
+        } else{
+            return 'Odd';
+        }
     }
 
     /**
@@ -109,7 +114,13 @@ public with sharing class FlowControlLoopsCollections{
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a){
-        return null; // Replace null with the variable you used to store the result
+        if (a == ''){
+            return 'Empty';
+        } else if (a == NULL){
+            return 'Null';
+        } else{
+            return 'Contains Text';
+        }
     }
 
     /**
@@ -124,7 +135,17 @@ public with sharing class FlowControlLoopsCollections{
      * @return The grade for the given score.
      */
     public static String determineGrade(Integer score){
-        return null; // Replace null with the variable you used to store the result
+        if (score >= 90){
+            return 'A';
+        } else if (score >= 80){
+            return 'B';
+        } else if (score >= 70){
+            return 'C';
+        } else if (score >= 60){
+            return 'D';
+        } else {
+            return 'F';
+        }
     }
 
     /**
@@ -134,13 +155,11 @@ public with sharing class FlowControlLoopsCollections{
      * @return The sum of all integers up to the limit.
      */
     public static Integer sumUpToLimit(Integer intLimit){
-        /*
-         for (){
-
-         }
-         */
-
-        return null; // Replace null with the variable you used to store the result
+        Integer sum = 0;
+        for (Integer i = 1; i <= intLimit; i++){
+            sum += i;
+        }
+        return sum;
     }
 
     /**
@@ -149,16 +168,11 @@ public with sharing class FlowControlLoopsCollections{
      * @return The string "Hello World!; Hello World!; Hello World!; "
      */
     public static String returnHelloWorld(){
-        // Initialize the result String
-
-        // Use a for loop to append 'Hello World!;' to the result string three times
-        /*
-         for (){
-
-         }
-         */
-
-        return null; // Replace null with the variable you used to store the result
+        String result = '';
+        for (Integer i = 0; i < 3; i++){
+            result += 'Hello World!; ';
+        }
+        return result;
     }
 
     /**
@@ -171,7 +185,7 @@ public with sharing class FlowControlLoopsCollections{
      * @return The new string with the inputString repeated repeatCount times.
      */
     public static String repeatString(String inputString, Integer repeatCount){
-        // Initialize the result String
+        String result = '';
 
         // Use a for loop to append the inputString to the result string repeatCount times
         /*
