@@ -321,21 +321,24 @@ public with sharing class FlowControlLoopsCollections{
     }
 
     /**
-     * Create a map that has five key-value pairs to the map, where the keys are the names of fruits and the values are their quantities.
+     * Create a map that has five key-value pairs to the map,
+     * where the keys are the names of fruits and the values are their quantities.
      * Example: addItemsToMap() should return "Apples => 5, Oranges => 10, Bananas => 15, Pears => 20, Grapes => 25"
      * @return The Map of fruits and their quantities.
      */
     public static Map<String, Integer> addItemsToMap(){
         // Initialize an empty Map
+        Map<String, Integer> fruitsAndQty = new Map<String, Integer>();
 
         // Add key-value pairs to the Map
-        // add Apples => 5
-        // add Oranges => 10
-        // add Bananas => 15
-        // add Pears => 20
-        // add Grapes => 25
 
-        return null; // Replace null with the variable you used to store the result
+        fruitsAndQty.put('Apples', 5);
+        fruitsAndQty.put('Oranges', 10);
+        fruitsAndQty.put('Bananas', 15);
+        fruitsAndQty.put('Pears', 20);
+        fruitsAndQty.put('Grapes', 25);
+
+        return fruitsAndQty;
     }
 
     /**
