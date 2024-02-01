@@ -236,8 +236,8 @@ public with sharing class FlowControlLoopsCollections{
      */
     public static List<Integer> createIntegerList(Integer n){
         List<Integer> numList = new List<Integer>();
-    
-        for (Integer i = 1; i <= n; i++) {
+
+        for (Integer i = 1; i <= n; i++){
             numList.add(i);
         }
 
@@ -253,9 +253,9 @@ public with sharing class FlowControlLoopsCollections{
      */
     public static Set<String> createStringSet(List<String> inputList){
         // Create a new Set of strings from the inputList
-        Set<String> stringSet  = new Set<String>(inputList);      
-    
-        return stringSet; 
+        Set<String> stringSet = new Set<String>(inputList);
+
+        return stringSet;
     }
 
     /**
@@ -265,12 +265,17 @@ public with sharing class FlowControlLoopsCollections{
      */
     public static Integer sumPositiveIntegers(){
         List<Integer> numbers = new List<Integer>{ -1, 2,  - 3, 4,  - 5, 6 }; //DO NOT CHANGE
+        Integer sum = 0; // Variable to store the sum of positive integers
 
         // Loop through the list of integers
-        // if the number is negative skip this iteration
+        for (Integer num : numbers){
+            // if the number is positive, add it to the sum
+            if (num > 0){
+                sum += num;
+            }
+        }
 
-
-        return null; // Replace null with the variable you used to store the result
+        return sum; // Return the sum of positive integers
     }
 
     /**
@@ -281,12 +286,18 @@ public with sharing class FlowControlLoopsCollections{
      * @return The position of the word in the list as a string or -1 if the word was not found.
      */
     public static Integer findWordInList(String wordToFind, List<String> words){
-        // The variable to store the index of the word
-
-        // Loop through the list of words
-        // If the current word is the word to find, exit the loop
-
-        return null; // Replace null with the variable you used to store the result
+        Integer index = -1; // Initialize index to -1 (not found)
+    
+        // Loop through the list to find the index of the word to find
+        for (Integer i = 0; i < words.size(); i++){
+            if (words[i] == wordToFind){
+                index = i;
+                break;
+            }
+        }
+    
+        System.debug('The index of ' + wordToFind + ' is: ' + index);
+        return index; // Return the index of the word, or -1 if the word was not found
     }
 
     /**
