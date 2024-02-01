@@ -143,7 +143,7 @@ public with sharing class FlowControlLoopsCollections{
             return 'C';
         } else if (score >= 60){
             return 'D';
-        } else {
+        } else{
             return 'F';
         }
     }
@@ -186,17 +186,13 @@ public with sharing class FlowControlLoopsCollections{
      */
     public static String repeatString(String inputString, Integer repeatCount){
         String result = '';
-
-        // Use a for loop to append the inputString to the result string repeatCount times
-        /*
-         for () {
-
-         // If it is not the last iteration, add a semicolon to separate the strings
-         }
-         */
-
-        // Return the final result string
-        return null; // Replace null with the variable you used to store the result
+        for (Integer i = 0; i < repeatCount; i++){
+            result += inputString;
+            if (i != repeatCount - 1){
+                result += '; ';
+            }
+        }
+        return result;
     }
 
     /**
@@ -206,14 +202,15 @@ public with sharing class FlowControlLoopsCollections{
      */
     public static List<Integer> createAndPopulateList(){
         // Create a new list of integers
+        List<Integer> numbers = new List<Integer>();
 
         // Add the integers 1, 2, and 3 to the list
-        // add 1
-        // add 2
-        // add 3
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
 
         // Return the populated list
-        return null; // Replace null with the variable you used to store the result
+        return numbers;
     }
 
     /**
@@ -225,10 +222,10 @@ public with sharing class FlowControlLoopsCollections{
         // Create a new list of integers and add numbers 1 to 5
         List<Integer> numberList = new List<Integer>{ 1, 2, 3, 4, 5 }; //DO NOT CHANGE
 
-        // Remove the 3rd element (number 3) from the list
+        numberList.remove(2);
 
         // Return the updated list
-        return null; // Replace null with the variable you used to store the result
+        return numberList;
     }
 
     /**
@@ -238,15 +235,13 @@ public with sharing class FlowControlLoopsCollections{
      * @return A List of integers from 1 to 'n'.
      */
     public static List<Integer> createIntegerList(Integer n){
-        // Create a new list of integers
+        List<Integer> numList = new List<Integer>();
+    
+        for (Integer i = 1; i <= n; i++) {
+            numList.add(i);
+        }
 
-        /*
-         for() {
-         //add integer to the list
-         }
-         */
-
-        return null; // Replace null with the variable you used to store the result
+        return numList;
     }
 
     /**
@@ -257,12 +252,10 @@ public with sharing class FlowControlLoopsCollections{
      * @return A Set of unique strings.
      */
     public static Set<String> createStringSet(List<String> inputList){
-        // Create a new Set of strings
-        Set<String> stringSet = new Set<String>();
-
-        //add strings to the set
-
-        return null; // Replace null with the variable you used to store the result
+        // Create a new Set of strings from the inputList
+        Set<String> stringSet  = new Set<String>(inputList);      
+    
+        return stringSet; 
     }
 
     /**
