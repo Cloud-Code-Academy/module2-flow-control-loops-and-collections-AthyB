@@ -43,11 +43,7 @@ public with sharing class FlowControlLoopsCollections{
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age){
-        if (age >= 18){
-            return TRUE;
-        } else{
-            return FALSE;
-        }
+        return age >= 18;
     }
 
     /**
@@ -62,8 +58,8 @@ public with sharing class FlowControlLoopsCollections{
         // Initialize largestNum as null
         Integer largestNum = null;
 
-        if (num1 == NULL || num2 == NULL){
-            return NULL;
+        if (num1 == null || num2 == null){
+            return null;
         } else{
             return Math.max(num1, num2);
         }
